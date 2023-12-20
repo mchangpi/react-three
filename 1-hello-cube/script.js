@@ -4,22 +4,39 @@ import * as THREE from "threelocal";
 
 const scene = new THREE.Scene();
 
+//Group
+const group = new THREE.Group();
+
 //Mesh
 const boxGeometry = new THREE.BoxGeometry(1, 1, 1);
 // const material = new THREE.MeshBasicMaterial({ color: "blue" });
 const material = new THREE.MeshBasicMaterial({ color: "skyblue" });
 const boxMesh = new THREE.Mesh(boxGeometry, material);
-console.log("box pos:", boxMesh.position);
 
-boxMesh.position.z = 1;
-scene.add(boxMesh);
+// boxMesh.position.z = 1;
+// console.log("box pos:", boxMesh.position);
+
+boxMesh.scale.x = 1.5;
+// console.log("box scale:", boxMesh.scale);
+
+boxMesh.rotation.x = Math.PI * 0.25;
+boxMesh.rotation.y = Math.PI * 1.2;
+console.log("box rotation:", boxMesh.rotation);
+
+//adding the two meshes inside the Group Class
+group.add(boxMesh);
+group.position.x = 1;
+console.log("group pos:", group.position);
+scene.add(group);
+
+//AxesHelper
+const axesHelper = new THREE.AxesHelper(1);
+scene.add(axesHelper);
 
 //Camera
 const aspect = {
-  // width: window.innerWidth,
-  // height: window.innerHeight,
-  width: 300,
-  height: 400,
+  width: window.innerWidth,
+  height: window.innerHeight,
 };
 console.log("aspect", aspect);
 
@@ -37,9 +54,9 @@ const camera = new THREE.PerspectiveCamera(
   1,
   10
 );
-camera.position.z = 5;
-camera.position.x = 0.8;
-camera.position.y = 0.8;
+camera.position.z = 3;
+camera.position.x = 1;
+camera.position.y = 1;
 scene.add(camera);
 
 //Renderer
