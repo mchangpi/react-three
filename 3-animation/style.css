@@ -1,0 +1,15 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: black;
+}
+
+.draw {
+  position: fixed;
+  left: 5px;
+  top: 5px;
+  outline: none;
+}
