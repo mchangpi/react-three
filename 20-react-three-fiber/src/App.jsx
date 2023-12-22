@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 // import Scene from "./Scene-20";
-import Scene from "./Scene-21";
+// import Scene from "./Scene-21";
+import Scene from "./Scene-22";
 
 const handleCreated = (state) => {
   // console.log("gl(WebGLRenderer):", state.gl);
@@ -20,7 +21,7 @@ function App() {
           near: 0.01,
           far: 100,
           // zoom: 80,
-          position: [0, 3, 3], // 1st way
+          position: [0, 0.5, 3], // 1st way
         }}
         onCreated={handleCreated}
       >
