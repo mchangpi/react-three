@@ -1,16 +1,28 @@
 import { Canvas } from "@react-three/fiber";
-import Scene from "./Scene";
+// import Scene from "./Scene-20";
+import Scene from "./Scene-21";
+
+const handleCreated = (state) => {
+  // console.log("gl(WebGLRenderer):", state.gl);
+
+  state.gl.setClearColor("cyan", 0.1);
+};
 
 function App() {
+  /* Check https://docs.pmnd.rs/react-three-fiber/api/canvas */
   return (
     <div className="container">
       <Canvas
+        gl={{ antialias: false, alpha: true }}
+        orthographic={false}
         camera={{
           fov: 75,
           near: 0.01,
           far: 100,
-          // position: [0, 0, 7], // 1st way
+          // zoom: 80,
+          position: [0, 3, 3], // 1st way
         }}
+        onCreated={handleCreated}
       >
         <Scene />
       </Canvas>

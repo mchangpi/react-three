@@ -15,7 +15,7 @@ const Scene = () => {
   useFrame((state, delta) => {
     cubeRef.current.rotation.y += delta / 10;
     planeRef.current.rotation.z += delta / 10;
-    state.camera.position.x = Math.sin(state.clock.elapsedTime); // 3rd way
+    // state.camera.position.x = Math.sin(state.clock.elapsedTime); // 3rd way
     // console.log(state.clock.elapsedTime);
   });
 
