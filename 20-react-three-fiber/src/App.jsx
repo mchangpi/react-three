@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import { Perf } from "r3f-perf";
-import Scene from "./scenes/scene-25";
+import Scene from "./scenes/scene-26";
 
 const handleCreated = (state) => {
   // console.log("gl(WebGLRenderer):", state.gl);
