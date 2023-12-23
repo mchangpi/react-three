@@ -1,12 +1,10 @@
 import { Canvas } from "@react-three/fiber";
 import { Perf } from "r3f-perf";
-// import Scene from "./scene-20";
-// import Scene from "./scene-21";
-import Scene from "./scenes/scene-24";
+import Scene from "./scenes/scene-25";
 
 const handleCreated = (state) => {
   // console.log("gl(WebGLRenderer):", state.gl);
-  state.gl.setClearColor("cyan", 0.1);
+  state.gl.setClearColor("white", 0.3);
 };
 
 function App() {
@@ -25,7 +23,7 @@ function App() {
         }}
         onCreated={handleCreated}
       >
-        <Perf position={"bottom-left"} />
+        {/* <Perf position={"bottom-left"} /> */}
         <Scene />
       </Canvas>
     </div>
