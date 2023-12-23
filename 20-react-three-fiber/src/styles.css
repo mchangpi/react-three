@@ -3,10 +3,10 @@
 /* #root, */
 .container {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 95%;
-  height: 95%;
+  top: 2%;
+  left: 2%;
+  width: 96%;
+  height: 96%;
   overflow: hidden;
 }
 
